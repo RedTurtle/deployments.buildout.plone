@@ -22,10 +22,10 @@ apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
 Installation
 ------------
 In the file base.cfg there is a section called [config] that sets the variable
-plone_version, e.g::
+plone-version, e.g::
 ```
 [config]
-plone_version = 4.2.4
+plone-version = 4.2.4
 ```
 
 You may want to change this, before starting.
