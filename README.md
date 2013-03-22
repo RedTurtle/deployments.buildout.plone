@@ -46,7 +46,7 @@ python2.7 bootstrap.py
 
 Add additional eggs to Plone
 ----------------------------
-Customize the eggs, and eventuali the zcml, variable in the plone section, e.g:
+Customize the eggs, and *optionally* the zcml, variable in the plone section, e.g:
 ```
 [plone]
 eggs+=
