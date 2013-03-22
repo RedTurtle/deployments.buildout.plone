@@ -1,6 +1,8 @@
 Plone 4 buildout
 ================
 
+[![Build Status](https://travis-ci.org/RedTurtle/deployments.buildout.plone.png?branch=master)](https://travis-ci.org/RedTurtle/deployments.buildout.plone)
+
 Introduction
 ------------
 This is the a very basic buildout template
