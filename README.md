@@ -1,6 +1,8 @@
 Plone 4 buildout
 ================
 
+[![Build Status](https://travis-ci.org/RedTurtle/deployments.buildout.plone.png?branch=master)](https://travis-ci.org/RedTurtle/deployments.buildout.plone)
+
 Introduction
 ------------
 This is the a very basic buildout template
@@ -46,13 +48,13 @@ python2.7 bootstrap.py
 
 Add additional eggs to Plone
 ----------------------------
-Customize the eggs, and eventuali the zcml, variable in the plone section, e.g:
+Customize the eggs, and *optionally* the zcml, variable in the plone section, e.g:
 ```
 [plone]
 eggs+=
-my.egg
+    my.egg
 zcml+=
-my.egg
+    my.egg
 ```
 
 Add development eggs to Plone

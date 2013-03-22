@@ -5,6 +5,5 @@ python:
 install:
   - python bootstrap.py -c travis.cfg
 script:
-  - bin/buildout -c plonesimple_4.2.4.cfg
   - bin/buildout -c development.cfg
-  - bin/buildout -c production.cfg
+  - bin/buildout -c production.cfg  
