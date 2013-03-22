@@ -50,9 +50,9 @@ Customize the eggs, and eventuali the zcml, variable in the plone section, e.g:
 ```
 [plone]
 eggs+=
-my.egg
+    my.egg
 zcml+=
-my.egg
+    my.egg
 ```
 
 Add development eggs to Plone
