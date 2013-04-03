@@ -11,7 +11,7 @@ For the impatients
 ------------------
 Make a symlink to the file you want to use (e.g. development.cfg) and start the buildout:
 ```
-ln -s development.cfg buildout.cfg
+ln -s config/development.cfg buildout.cfg
 python2.7 bootstrap.py
 ./bin/buildout
 ```
@@ -33,7 +33,7 @@ apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
 ```
 
 ### Plone version ###
-In the file plone.cfg you may can control the plone version by changing the
+In the file config/_plone.cfg you may can control the plone version by changing the
 __extends__ and __find-links__ variables:
 ```
 extends = 
@@ -59,7 +59,7 @@ virtualenv --no-site-packages -p /usr/bin/python2.7 .
 
 ### Add additional eggs to Plone ###
 Customize the __eggs__ and the __zcml__ variable in the **[plone]** section (a
-good place is base.cfg), e.g:
+good place is config/_base.cfg), e.g:
 ```
 [plone]
 eggs+=
@@ -69,7 +69,7 @@ zcml+=
 ```
 
 ### Add development eggs with mr.developer ###
-Customize the **[sources]** section (a good place is development.cfg) adding
+Customize the **[sources]** section (a good place is config/development.cfg) adding
 your checkouts, e.g:
 ```
 [sources]
