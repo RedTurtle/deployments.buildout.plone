@@ -11,7 +11,7 @@ For the impatients
 ------------------
 Make a symlink to the file you want to use (e.g. `development.cfg`) and start the buildout:
 ```bash
-$ ln -s config/development.cfg buildout.cfg
+$ ln -s profiles/development.cfg buildout.cfg
 $ python2.7 bootstrap.py
 $ ./bin/buildout
 ```
@@ -33,7 +33,7 @@ $ apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
 ```
 
 ### Plone version ###
-In the file `config/_plone.cfg` you may can control the plone version by changing the
+In the file `config/plone.cfg` you may can control the plone version by changing the
 __extends__ and __find-links__ variables:
 ```cfg
 extends = 
@@ -56,7 +56,7 @@ $ ./bin/activate
 
 ### Add additional eggs to Plone ###
 Customize the __eggs__ and the __zcml__ variable in the **[plone]** section (a
-good place is `config/_base.cfg`), e.g:
+good place is `config/base.cfg`), e.g:
 ```cfg
 [plone]
 eggs+=
@@ -66,7 +66,7 @@ zcml+=
 ```
 
 ### Add development eggs with mr.developer ###
-Customize the **[sources]** section (a good place is `config/development.cfg`) adding
+Customize the **[sources]** section (a good place is `profiles/development.cfg`) adding
 your checkouts, e.g:
 ```cfg
 [sources]
@@ -75,9 +75,9 @@ collective.developermanual = git git://github.com/collective/collective.develope
 
 The provided configuration files
 --------------------------------
-In the directory `./config` you will find configs that can be symlinked in the root of the buildout.
+In the directory `./profiles` you will find configs that can be symlinked in the root of the buildout.
 
-__You shouldn't use directly configuration files that are starting with underscore ( _ )__
+__You shouldn't use directly configuration files that are stored in `config` folder.__
 
 Beneath is the list of available configurations:
 
