@@ -37,11 +37,11 @@ In the file `config/plone.cfg` you may can control the plone version by changing
 __extends__ and __find-links__ variables:
 ```cfg
 extends = 
-    http://dist.plone.org/release/4.2.5/versions.cfg
+    http://dist.plone.org/release/4.3/versions.cfg
     ...
 
 find-links =
-    http://dist.plone.org/release/4.2.5
+    http://dist.plone.org/release/4.3
     ...
 ```
 
