@@ -4,6 +4,13 @@ CHANGES
 2013/04/03
 ----------
 
+- Upgrade to Plone 4.3
+- Documentation
+[ale-rt]
+
+2013/04/03
+----------
+
 Simplicity proposal [amleczko]
 
 2013/03/22
