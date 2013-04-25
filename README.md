@@ -33,7 +33,7 @@ $ apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
 ```
 
 ### Plone version ###
-In the file `config/plone.cfg` you may can control the plone version by changing the
+In the file `config/base.cfg` you may can control the plone version by changing the
 __extends__ and __find-links__ variables:
 ```cfg
 extends = 
@@ -94,7 +94,7 @@ Port: 8080
 ```
 Adds to the buildout development scripts (`test`, `i18ndude`) and to plone some
 products (`plone.reload` and `stxnext.pdb`).
-Some other are suggested (commented) In the `config/development.cfg` file.
+Some other are suggested (commented) In the `profiles/development.cfg` file.
 Ask for new stuff if you want (`sauna.reload`, `plone.app.debugtoolbar`, ...).
 
 ### production.cfg ###
