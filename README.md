@@ -37,11 +37,11 @@ In the file `config/base.cfg` you may can control the plone version by changing 
 __extends__ and __find-links__ variables:
 ```cfg
 extends = 
-    http://dist.plone.org/release/4.2.5/versions.cfg
+    http://dist.plone.org/release/4.3/versions.cfg
     ...
 
 find-links =
-    http://dist.plone.org/release/4.2.5
+    http://dist.plone.org/release/4.3
     ...
 ```
 
@@ -51,7 +51,7 @@ Using a virtualenv is a good idea:
 # NOTE: --no-site-packages is the default behaviour of the newer virtualenv
 #       you might remove this parameter if you get an error
 $ virtualenv --no-site-packages -p /usr/bin/python2.7 .
-$ ./bin/activate
+$ . bin/activate
 ```
 
 ### Add additional eggs to Plone ###
