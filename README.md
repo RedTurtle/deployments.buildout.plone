@@ -51,7 +51,7 @@ Using a virtualenv is a good idea:
 # NOTE: --no-site-packages is the default behaviour of the newer virtualenv
 #       you might remove this parameter if you get an error
 $ virtualenv --no-site-packages -p /usr/bin/python2.7 .
-$ ./bin/activate
+$ . bin/activate
 ```
 
 ### Add additional eggs to Plone ###
