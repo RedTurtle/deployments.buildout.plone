@@ -1,0 +1,7 @@
+#!/bin/bash
+for pidfile in ${buildout:directory}/var/instance*.pid; do
+        if [ -s $pidfile ]; then
+                pid=`cat "$pidfile"`
+                kill -USR2 $pid 2> ${buildout:directory}/var/log/postrotate.log
+        fi
+done

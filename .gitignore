@@ -1,6 +1,7 @@
 .directory
 bin
 eggs
+etc
 include
 lib
 local
