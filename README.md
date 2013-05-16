@@ -98,13 +98,25 @@ Some other are suggested (commented) In the `profiles/development.cfg` file.
 Ask for new stuff if you want (`sauna.reload`, `plone.app.debugtoolbar`, ...).
 
 ### production.cfg ###
-A ZEO cluster ready for production
-Will install:
+This is what you want for a production system.
+
+Using `production.cfg` you will install the services:
 - zeoserver
 - instance1
 - debuginstance
-- zeopack
-- repozo
+
+the management scripts:
+- bin/zeopack
+- bin/repozo
+
+the logrotate machinery:
+- etc/logorate.conf
+- bin/postrotate.sh
+
+#### Log rotation ####
+The logrotation is handled externally from Zope by choice. This allows at any time to use the system logrotate capabilities.
+To enable/update the configuration created via buildout
+you have to manualy copy or symlink the etc/logrotate.conf file to the proper location. See the `etc/logrotate.conf` file header (created after you succesfully run the production buildout).
 
 Note
 ----

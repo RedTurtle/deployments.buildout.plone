@@ -1,0 +1,18 @@
+# This is a buildout generated file, do not edit
+# Edit this instead:
+#     ${:input}
+# This file should be copied/symlinked to the /etc/logrotate.d/ folder:
+# cp -i ${:output} /etc/logrotate.d/${config:servername}
+
+${buildout:directory}/var/log/*.log {
+        weekly
+        rotate ${:rotate}
+        compress
+        delaycompress
+        missingok
+        notifempty
+        sharedscripts
+        postrotate
+                ${postrotate:output}
+        endscript
+}
