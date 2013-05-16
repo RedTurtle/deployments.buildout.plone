@@ -3,7 +3,9 @@ CHANGES
 
 0.2 - (unreleased)
 ------------------
-
+- Added haufe.requestmonitoring [ale-rt]
+- Added munin.zope [ale-rt]
+- Added ZopeHealthWatcer [ale-rt]
 - Upgrade to Plone 4.3 [ale-rt]
 - Documentation [ale-rt]
 

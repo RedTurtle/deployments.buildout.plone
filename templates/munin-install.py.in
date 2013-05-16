@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+# This is a buildout generated file. Do not edit directly
+# Edit his instead:
+#     {:input}
+# This script installs all the connected munin plugins
+import os
+INSTANCES="${:instances}"
+CMD_TEMPLATE = ('${buildout:directory}/bin/%s install '
+                '/etc/munin/plugins ${munin:prefix} %s')
+
+if __name__ == '__main__':
+    for instance in INSTANCES.splitlines():
+        suffix = instance.strip().split('-')[-1]
+        cmd = CMD_TEMPLATE % (instance, suffix)
+        print cmd
+        os.system(cmd)
+
