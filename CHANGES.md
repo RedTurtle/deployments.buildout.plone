@@ -4,6 +4,7 @@ CHANGES
 0.2 - (unreleased)
 ------------------
 
+- Log rotation [ale-rt]
 - Upgrade to Plone 4.3 [ale-rt]
 - Documentation [ale-rt]
 
