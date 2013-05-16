@@ -106,6 +106,10 @@ Will install:
 - zeopack
 - repozo
 
+#### munin ####
+`production.cfg` will provide you a script to deploy (if needed)
+symlinks for munin.zope.
+
 Note
 ----
 ### Versions pinning ###
