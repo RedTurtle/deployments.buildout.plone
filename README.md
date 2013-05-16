@@ -110,6 +110,20 @@ Will install:
 `production.cfg` will provide you a script to deploy (if needed)
 symlinks for munin.zope.
 
+#### ZopeHealthWatcher ####
+
+Remember to customize the `custom.py` file:
+```bash
+vi eggs/ZopeHealthWatcher*.egg/Products/ZopeHealthWatcher/custom.py
+```
+
+Then use it like this:
+```bash
+bin/zope_health_watcher http://localhost:8080
+```
+
+Or visit http://localhost:8080/manage_zhw?the_secret_you_put_in_custom.py
+
 Note
 ----
 ### Versions pinning ###
