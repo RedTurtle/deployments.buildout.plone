@@ -11,7 +11,7 @@ I am feeling lucky!
 -------------------
 Run this:
 ```
-./.imafeelinglucky.sh
+./.imfeelinglucky.sh
 ```
 
 For the impatients
