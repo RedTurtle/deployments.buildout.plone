@@ -7,6 +7,13 @@ Introduction
 ------------
 This is the a very basic buildout template
 
+I am feeling lucky!
+-------------------
+Run this:
+```
+./.imafeelinglucky.sh
+```
+
 For the impatients
 ------------------
 Make a symlink to the file you want to use (e.g. `development.cfg`) and start the buildout:
