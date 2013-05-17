@@ -118,6 +118,24 @@ The logrotation is handled externally from Zope by choice. This allows at any ti
 To enable/update the configuration created via buildout
 you have to manualy copy or symlink the etc/logrotate.conf file to the proper location. See the `etc/logrotate.conf` file header (created after you succesfully run the production buildout).
 
+#### munin ####
+`production.cfg` will provide you a script to deploy (if needed)
+symlinks for munin.zope.
+
+#### ZopeHealthWatcher ####
+
+Remember to customize the `custom.py` file:
+```bash
+vi eggs/ZopeHealthWatcher*.egg/Products/ZopeHealthWatcher/custom.py
+```
+
+Then use it like this:
+```bash
+bin/zope_health_watcher http://localhost:8080
+```
+
+Or visit http://localhost:8080/manage_zhw?the_secret_you_put_in_custom.py
+
 Note
 ----
 ### Versions pinning ###

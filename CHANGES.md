@@ -3,10 +3,12 @@ CHANGES
 
 0.2 - (unreleased)
 ------------------
-
-- Log rotation [ale-rt]
+- Added haufe.requestmonitoring [ale-rt]
+- Added ZopeHealthWatcer [ale-rt]
 - Upgrade to Plone 4.3 [ale-rt]
 - Documentation [ale-rt]
+- Log rotation [ale-rt]
+
 
 0.1 - (2013/04/25)
 ------------------
