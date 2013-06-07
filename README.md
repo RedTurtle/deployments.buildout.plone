@@ -90,6 +90,9 @@ collective.developermanual = git git://github.com/collective/collective.develope
 - Add the egg to your Plone site (see the [dedicated FAQ](#faq-egg ))
 - Relaunch your buildout.
 
+#### Q: I want include a package from a private repository. What should I do? ####
+- __A:__ Don't do it, use the folder pypi-local in the root of your buildout folder instead!
+
 #### Q: I am Danny Developer. I want to include a debugging package nobody else wants to use. What should I do? ####
 - __A:__ Create your own __profile__, e.g.:
 
@@ -167,7 +170,7 @@ virtualenv --no-site-packages -p /usr/bin/python2.7 .
 
 #### mr.developer vs filesystem packages ####
 If you want [mr.developer](https://pypi.python.org/pypi/mr.developer)
-to use a folder that is not yet versioned 
+to use a folder that is not yet versioned
 (e.g. because you still have to make an initial import),
 you can use the __fs__ repository type:
 ```cfg
