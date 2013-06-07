@@ -112,6 +112,20 @@ danny.debugtools = git git://github.com/dannydeveloper/danny.debugtools.git
 ```
 - Relaunch your buildout.
 
+#### Q: I am Danny Developer. I want to customize the instance port. What should I do? ####
+- __A:__ Create your own __profile__, e.g.:
+
+```bash
+cp profiles/development.cfg profiles/danny.cfg
+ln -sf profiles/danny.cfg buildout.cfg
+```
+
+- Add a section like this to `profiles/danny.cfg`:
+```cfg
+[instance]
+http-address=9090
+```
+
 #### Q: I am Rick Releaser. I want to deploy this buildout on the server matrix.nohost.com. Of course I have to customize ports, users and so on. What should I do? ####
 - __A:__ Create a dedicate __profile__ for this server, e.g.:
 
@@ -150,6 +164,17 @@ Using a virtualenv is a good idea:
 virtualenv --no-site-packages -p /usr/bin/python2.7 .
 . bin/activate
 ```
+
+#### mr.developer vs filesystem packages ####
+If you want [mr.developer](https://pypi.python.org/pypi/mr.developer)
+to use a folder that is not yet versioned 
+(e.g. because you still have to make an initial import),
+you can use the __fs__ repository type:
+```cfg
+[sources]
+still.to.import = fs still.to.import
+```
+By default paths are relative to buildout `src` folder.
 
 ## Rationale ##
 This buildout was designed with these goals:
