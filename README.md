@@ -1,31 +1,29 @@
-Plone 4 buildout
-================
+# Plone 4 buildout #
 
 [![Build Status](https://travis-ci.org/RedTurtle/deployments.buildout.plone.png?branch=master)](https://travis-ci.org/RedTurtle/deployments.buildout.plone)
 
-Introduction
-------------
+## Introduction ##
 This is the a very basic buildout template to run Plone.
 It is designed to make developer life easier.
 
-I am feeling lucky!
--------------------
-If you have a local copy of this buildout, run this:
+## I am feeling lucky! ##
+Lucky people read the documentation,
+anyway if you have a local copy of this buildout,
+try to run this command:
 ```bash
 ./.imfeelinglucky.sh
 ```
 
-For the impatients
-------------------
-Make a symlink to the file you want to use (e.g. `development.cfg`) and start the buildout:
+## For the impatients ##
+Make a symlink to the file you want to use (e.g. `development.cfg`)
+and start the buildout:
 ```bash
 ln -s profiles/development.cfg buildout.cfg
 python2.7 bootstrap.py
 ./bin/buildout
 ```
 
-Before you start
-----------------
+## Before you start ##
 Probably you may want to set up your system and configure some parameters!
 Don't forget to read the full documentation.
 
@@ -40,12 +38,25 @@ apt-get install git subversion
 apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
 ```
 
+Those commands are for Debian like system.
+You should adapt those commands for your system (if needed).
+
 ## FAQ ##
-### Q: How can I change the Plone version ###
+#### Q: How can I clone this buildout? ####
+__A:__ This buildout is meant to be a starting skeleton for a project.
+You should download this buildout by visiting the
+[dedicated github page](https://github.com/RedTurtle/deployments.buildout.plone).
+
+There you can click the zip button.
+Uncompress the downloaded zip file in the directory of your choice.
+You may want to add this directory to the version control system of your
+choice.
+
+#### Q: How can I change the Plone version? ####
 __A:__ In the file `config/base.cfg` you may can control the plone version by changing the
 __extends__ and __find-links__ variables:
 ```cfg
-extends = 
+extends =
     http://dist.plone.org/release/4.3/versions.cfg
     ...
 
@@ -54,7 +65,7 @@ find-links =
     ...
 ```
 
-### <a id="faq-egg"></a> Q: I have to add a new egg to my Plone site. What should I do? ###
+#### <a id="faq-egg"></a> Q: I have to add a new egg to my Plone site. What should I do? ####
 __A:__ Customize the __eggs__ and (if needed) the __zcml__ variable in the **[plone]** section (a
 good place is `config/base.cfg`), e.g:
 
@@ -68,7 +79,7 @@ zcml=
     my.egg
 ```
 
-### Q: I want to develop my new package. What should I do? ###
+#### Q: I want to develop my new package. What should I do? ####
 - __A:__ Customize the `[sources]` section in `config/development.cfg` to include your code in the buildout:
 
 ```cfg
@@ -79,7 +90,7 @@ collective.developermanual = git git://github.com/collective/collective.develope
 - Add the egg to your Plone site (see the [dedicated FAQ](#faq-egg ))
 - Relaunch your buildout.
 
-### Q: I am Danny Developer. I want to include a debugging package nobody else wants to use. What should I do? ###
+#### Q: I am Danny Developer. I want to include a debugging package nobody else wants to use. What should I do? ####
 - __A:__ Create your own __profile__, e.g.:
 
 ```bash
@@ -101,10 +112,7 @@ danny.debugtools = git git://github.com/dannydeveloper/danny.debugtools.git
 ```
 - Relaunch your buildout.
 
-### Q: I am Rick Releaser. 
-I want to deploy this buildout on the server matrix.nohost.com. 
-Of course I have to customize ports, users and so on. 
-What should I do? ###
+#### Q: I am Rick Releaser. I want to deploy this buildout on the server matrix.nohost.com. Of course I have to customize ports, users and so on. What should I do? ####
 - __A:__ Create a dedicate __profile__ for this server, e.g.:
 
 ```bash
@@ -122,13 +130,19 @@ debuginstance-address = 9000
 system-user = plone
 ```
 
-### Q: I want supervisor, come on! Where is it? ###
-__A:__ This buildout wants to be as small as possibile. 
-Use https://github.com/RedTurtle/deployments.buildout.production
+#### Q: I want supervisor, come on! Where is it? ####
+__A:__ This buildout wants to be as small as possibile.
+Integrate this buildout with
+https://github.com/RedTurtle/deployments.buildout.production
+if you need supervisor.
+
+#### Q: I have to pin versions! What should I do? ####
+__A:__ Modify `versions/base.cfg` unless you are doing for particular purposes.
+In this case it is better to customize those versions in a dedicated profile.
 
 ## Tips ##
 
-### Virtualenv ###
+#### Virtualenv ####
 Using a virtualenv is a good idea:
 ```bash
 # NOTE: --no-site-packages is the default behaviour of the newer virtualenv
@@ -137,20 +151,31 @@ virtualenv --no-site-packages -p /usr/bin/python2.7 .
 . bin/activate
 ```
 
-The provided configuration files
---------------------------------
-In the directory `./profiles` you will find configs that can be symlinked in the root of the buildout.
+## Rationale ##
+This buildout was designed with these goals:
+- cut down the time needed for the developers to set up a working enviroment
+- avoid proliferation of configuration files
+- to serve a Plone site without pretending to do much more
 
-__You shouldn't use directly configuration files that are stored in `config` folder.__
+### Profiles ###
+In the directory `./profiles` you will find configuration files
+that work __if and only__ if they are symlinked in the root of the buildout.
 
+We want profile files to live there to avoid pollution on the already crowded
+buildout directory.
+
+__You shouldn't use directly configuration files
+that are stored in `config` folder.__
+
+### The provided configuration files ###
 Beneath is the list of available configurations:
 
-### development.cfg ###
+#### development.cfg ####
 This is what the developer wants!
 Gives you a standalone Plone instance (no ZEO).
 As usual you can launch it with:
 ```bash
-$ ./bin/instance fg
+./bin/instance fg
 2013-03-22 13:58:39 INFO ZServer HTTP server started at Fri Mar 22 13:58:39 2013
 Hostname: 0.0.0.0
 Port: 8080
@@ -161,7 +186,7 @@ products (`plone.reload` and `stxnext.pdb`).
 Some other are suggested (commented) In the `profiles/development.cfg` file.
 Ask for new stuff if you want (`sauna.reload`, `plone.app.debugtoolbar`, ...).
 
-### production.cfg ###
+#### production.cfg ####
 This is what you want for a production system.
 
 Using `production.cfg` you will install the services:
@@ -177,16 +202,16 @@ the logrotate machinery:
 - etc/logorate.conf
 - bin/postrotate.sh
 
-#### Log rotation ####
+##### Log rotation #####
 The logrotation is handled externally from Zope by choice. This allows at any time to use the system logrotate capabilities.
 To enable/update the configuration created via buildout
 you have to manualy copy or symlink the etc/logrotate.conf file to the proper location. See the `etc/logrotate.conf` file header (created after you succesfully run the production buildout).
 
-#### munin ####
+##### munin #####
 `production.cfg` will provide you a script to deploy (if needed)
 symlinks for munin.zope.
 
-#### ZopeHealthWatcher ####
+##### ZopeHealthWatcher #####
 
 Remember to customize the `custom.py` file:
 ```bash
@@ -199,9 +224,3 @@ bin/zope_health_watcher http://localhost:8080
 ```
 
 Or visit http://localhost:8080/manage_zhw?the_secret_you_put_in_custom.py
-
-Note
-----
-### Versions pinning ###
-The buildout prints unpinned versions at the end of the build.
-You may want to add them to some cfg file.
