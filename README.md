@@ -5,12 +5,13 @@ Plone 4 buildout
 
 Introduction
 ------------
-This is the a very basic buildout template
+This is the a very basic buildout template to run Plone.
+It is designed to make developer life easier.
 
 I am feeling lucky!
 -------------------
-Run this:
-```
+If you have a local copy of this buildout, run this:
+```bash
 ./.imfeelinglucky.sh
 ```
 
@@ -18,9 +19,9 @@ For the impatients
 ------------------
 Make a symlink to the file you want to use (e.g. `development.cfg`) and start the buildout:
 ```bash
-$ ln -s profiles/development.cfg buildout.cfg
-$ python2.7 bootstrap.py
-$ ./bin/buildout
+ln -s profiles/development.cfg buildout.cfg
+python2.7 bootstrap.py
+./bin/buildout
 ```
 
 Before you start
@@ -32,15 +33,16 @@ Don't forget to read the full documentation.
 You may want to install this to get this buildout working:
 ```bash
 # python stuff
-$ apt-get install python-dev python-virtualenv
+apt-get install python-dev python-virtualenv
 # version control stuff
-$ apt-get install git subversion
+apt-get install git subversion
 # other stuff
-$ apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
+apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
 ```
 
-### Plone version ###
-In the file `config/base.cfg` you may can control the plone version by changing the
+## FAQ ##
+### Q: How can I change the Plone version ###
+__A:__ In the file `config/base.cfg` you may can control the plone version by changing the
 __extends__ and __find-links__ variables:
 ```cfg
 extends = 
@@ -52,32 +54,87 @@ find-links =
     ...
 ```
 
+### <a id="faq-egg"></a> Q: I have to add a new egg to my Plone site. What should I do? ###
+__A:__ Customize the __eggs__ and (if needed) the __zcml__ variable in the **[plone]** section (a
+good place is `config/base.cfg`), e.g:
+
+```cfg
+[plone]
+eggs=
+    ...
+    my.egg
+zcml=
+    ...
+    my.egg
+```
+
+### Q: I want to develop my new package. What should I do? ###
+- __A:__ Customize the `[sources]` section in `config/development.cfg` to include your code in the buildout:
+
+```cfg
+[sources]
+collective.developermanual = git git://github.com/collective/collective.developermanual.git
+```
+
+- Add the egg to your Plone site (see the [dedicated FAQ](#faq-egg ))
+- Relaunch your buildout.
+
+### Q: I am Danny Developer. I want to include a debugging package nobody else wants to use. What should I do? ###
+- __A:__ Create your own __profile__, e.g.:
+
+```bash
+cp profiles/development.cfg profiles/danny.cfg
+ln -sf profiles/danny.cfg buildout.cfg
+```
+
+- Add a section like this to `profiles/danny.cfg`:
+```cfg
+[plone]
+eggs+=
+    danny.debugtools
+```
+- __If__ you need to checkout the package with mr.developer.
+
+```cfg
+[sources]
+danny.debugtools = git git://github.com/dannydeveloper/danny.debugtools.git
+```
+- Relaunch your buildout.
+
+### Q: I am Rick Releaser. 
+I want to deploy this buildout on the server matrix.nohost.com. 
+Of course I have to customize ports, users and so on. 
+What should I do? ###
+- __A:__ Create a dedicate __profile__ for this server, e.g.:
+
+```bash
+cp profiles/production.cfg profiles/matrix.cfg
+ln -sf profiles/matrix.cfg buildout.cfg
+```
+
+- Add a section like this to `profiles/matrix.cfg`:
+
+```cfg
+[config]
+zeo-address = 9010
+instance1-address = 9001
+debuginstance-address = 9000
+system-user = plone
+```
+
+### Q: I want supervisor, come on! Where is it? ###
+__A:__ This buildout wants to be as small as possibile. 
+Use https://github.com/RedTurtle/deployments.buildout.production
+
+## Tips ##
+
 ### Virtualenv ###
 Using a virtualenv is a good idea:
 ```bash
 # NOTE: --no-site-packages is the default behaviour of the newer virtualenv
 #       you might remove this parameter if you get an error
-$ virtualenv --no-site-packages -p /usr/bin/python2.7 .
-$ . bin/activate
-```
-
-### Add additional eggs to Plone ###
-Customize the __eggs__ and the __zcml__ variable in the **[plone]** section (a
-good place is `config/base.cfg`), e.g:
-```cfg
-[plone]
-eggs+=
-    my.egg
-zcml+=
-    my.egg
-```
-
-### Add development eggs with mr.developer ###
-Customize the **[sources]** section (a good place is `profiles/development.cfg`) adding
-your checkouts, e.g:
-```cfg
-[sources]
-collective.developermanual = git git://github.com/collective/collective.developermanual.git
+virtualenv --no-site-packages -p /usr/bin/python2.7 .
+. bin/activate
 ```
 
 The provided configuration files
