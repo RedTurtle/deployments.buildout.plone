@@ -3,6 +3,7 @@ python:
   - "2.6"
   - "2.7"
 install:
+  - bin/pip install --upgrade setuptools
   - python bootstrap.py -c ./.travis.cfg
 before_script:
   - ln -s ./profiles/production.cfg production.cfg
