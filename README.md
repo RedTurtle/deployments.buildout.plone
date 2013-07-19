@@ -147,6 +147,12 @@ debuginstance-address = 9000
 system-user = plone
 ```
 
+#### Q: How can I add an instance? ####
+__A:__ In 'config/production.cfg' you can find, commented,
+the configuration for `instance2`.
+Uncomment it to get two instance. 
+Copy and adjust the numbers for more.
+
 #### Q: I want supervisor, come on! Where is it? ####
 __A:__ This buildout wants to be as small as possibile.
 Integrate this buildout with
