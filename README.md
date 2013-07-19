@@ -231,13 +231,24 @@ the logrotate machinery:
 - bin/postrotate.sh
 
 ##### Log rotation #####
-The logrotation is handled externally from Zope by choice. This allows at any time to use the system logrotate capabilities.
+The logrotation is handled externally from Zope by choice. 
+This allows at any time to use the system logrotate capabilities.
 To enable/update the configuration created via buildout
-you have to manualy copy or symlink the etc/logrotate.conf file to the proper location. See the `etc/logrotate.conf` file header (created after you succesfully run the production buildout).
+you have to manualy copy or symlink the `etc/logrotate.conf` 
+file to the proper location. 
+See the `etc/logrotate.conf` file header 
+(created after you succesfully run the production buildout).
+To install the logrotate script you can run:
+```bash
+sudo make install_logrotate
+```
 
 ##### munin #####
 `production.cfg` will provide you a script to deploy (if needed)
 symlinks for munin.zope.
+To install the munin plugins you can run:
+```bash
+sudo make install_munin
 
 ##### ZopeHealthWatcher #####
 
