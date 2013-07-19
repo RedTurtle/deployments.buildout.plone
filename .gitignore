@@ -1,9 +1,13 @@
 .directory
+.settings
 bin
+buildout.cfg
+develop-eggs/*
 eggs
 etc
 include
 lib
 local
+profiles/ale.cfg
+src/*
 var/*
-buildout.cfg
