@@ -8,6 +8,7 @@ PYTHON=`which python2.7 || which python`
 
 # Let's enter the virtualenv
 . bin/activate
+pip install --upgrade setuptools
 
 # Now we have
 PYTHON=`which python2.7 || which python`
