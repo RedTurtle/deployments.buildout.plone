@@ -5,7 +5,7 @@ CHANGES
 ------------------
 - Added haufe.requestmonitoring [ale-rt]
 - Added ZopeHealthWatcer [ale-rt]
-- Upgrade to Plone 4.3 [ale-rt]
+- Upgrade to Plone 4.3.1 [ale-rt]
 - Documentation [ale-rt]
 - Log rotation [ale-rt]
 
