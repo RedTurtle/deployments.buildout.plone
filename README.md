@@ -148,9 +148,12 @@ system-user = plone
 ```
 
 #### Q: How can I add an instance? ####
-__A:__ In 'config/production.cfg' you can find, commented,
+__A:__ In 'config/base.cfg' you can find, commented,
 the configuration for `instance2`.
-Uncomment it to get two instance. 
+Uncomment it to get two instance.
+
+Add also port number to [config] section.
+
 Copy and adjust the numbers for more.
 
 #### Q: I want supervisor, come on! Where is it? ####
