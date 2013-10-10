@@ -57,13 +57,17 @@ __A:__ In the file `config/base.cfg` you may can control the plone version by ch
 __extends__ and __find-links__ variables:
 ```cfg
 extends =
-    http://dist.plone.org/release/4.3/versions.cfg
+    http://dist.plone.org/release/4.3.2/versions.cfg
     ...
 
 find-links =
-    http://dist.plone.org/release/4.3
+    http://dist.plone.org/release/4.3.2
     ...
 ```
+
+__Tip__: unpin the versions in `versions/base.cfg`
+to get the latest versions for your dependencies.
+After a succesfull buildout repin them.
 
 #### <a id="faq-egg"></a> Q: I have to add a new egg to my Plone site. What should I do? ####
 __A:__ Customize the __eggs__ and (if needed) the __zcml__ variable in the **[plone]** section (a
