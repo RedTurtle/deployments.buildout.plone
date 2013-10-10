@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-0.2 - (unreleased)
+0.2 - (2013/10/10)
 ------------------
 - Added haufe.requestmonitoring [ale-rt]
 - Added ZopeHealthWatcer [ale-rt]
