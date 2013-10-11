@@ -4,6 +4,7 @@ CHANGES
 0.3 - (unreleased)
 ------------------
 - Upgrade to Plone 4.3.2 [ale-rt]
+- Added products folder [ale-rt]
 
 0.2 - (2013/10/10)
 ------------------
