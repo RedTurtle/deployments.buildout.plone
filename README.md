@@ -18,7 +18,10 @@ try to run this command:
 Make a symlink to the file you want to use (e.g. `development.cfg`)
 and start the buildout:
 ```bash
+virtualenv --no-site-packages -p `which python2.7`
 ln -s profiles/development.cfg buildout.cfg
+. bin/activate
+pip install --upgrade setuptools
 python2.7 bootstrap.py
 ./bin/buildout
 ```
