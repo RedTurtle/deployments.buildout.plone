@@ -34,7 +34,7 @@ Don't forget to read the full documentation.
 You may want to install this to get this buildout working:
 ```bash
 # python stuff
-apt-get install python-dev python-virtualenv
+apt-get install python-dev python-virtualenv libxml2-dev libxslt1-dev
 # version control stuff
 apt-get install git subversion
 # other stuff
