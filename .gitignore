@@ -1,4 +1,6 @@
 .directory
+.installed.cfg
+.mr.developer.cfg
 .settings
 bin
 buildout.cfg
@@ -8,6 +10,7 @@ etc
 include
 lib
 local
+parts
 profiles/ale.cfg
 src/*
 var/*
