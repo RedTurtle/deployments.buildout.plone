@@ -11,3 +11,6 @@ local
 profiles/ale.cfg
 src/*
 var/*
+.installed.cfg
+.mr.developer.cfg
+parts/*
