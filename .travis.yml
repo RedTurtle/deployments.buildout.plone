@@ -11,3 +11,6 @@ before_script:
 script:
   - bin/buildout -c development.cfg
   - bin/buildout -c production.cfg
+branches:
+  except:
+    - plone3.x

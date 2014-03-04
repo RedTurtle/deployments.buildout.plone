@@ -18,7 +18,10 @@ try to run this command:
 Make a symlink to the file you want to use (e.g. `development.cfg`)
 and start the buildout:
 ```bash
+virtualenv --no-site-packages -p `which python2.7`
 ln -s profiles/development.cfg buildout.cfg
+. bin/activate
+pip install --upgrade setuptools
 python2.7 bootstrap.py
 ./bin/buildout
 ```
@@ -31,7 +34,7 @@ Don't forget to read the full documentation.
 You may want to install this to get this buildout working:
 ```bash
 # python stuff
-apt-get install python-dev python-virtualenv
+apt-get install python-dev python-virtualenv libxml2-dev libxslt1-dev
 # version control stuff
 apt-get install git subversion
 # other stuff
@@ -57,13 +60,17 @@ __A:__ In the file `config/base.cfg` you may can control the plone version by ch
 __extends__ and __find-links__ variables:
 ```cfg
 extends =
-    http://dist.plone.org/release/4.3/versions.cfg
+    http://dist.plone.org/release/4.3.2/versions.cfg
     ...
 
 find-links =
-    http://dist.plone.org/release/4.3
+    http://dist.plone.org/release/4.3.2
     ...
 ```
+
+__Tip__: unpin the versions in `versions/base.cfg`
+to get the latest versions for your dependencies.
+After a succesfull buildout repin them.
 
 #### <a id="faq-egg"></a> Q: I have to add a new egg to my Plone site. What should I do? ####
 __A:__ Customize the __eggs__ and (if needed) the __zcml__ variable in the **[plone]** section (a
@@ -148,9 +155,12 @@ system-user = plone
 ```
 
 #### Q: How can I add an instance? ####
-__A:__ In 'config/production.cfg' you can find, commented,
+__A:__ In 'config/base.cfg' you can find, commented,
 the configuration for `instance2`.
-Uncomment it to get two instance. 
+Uncomment it to get two instance.
+
+Add also port number to [config] section.
+
 Copy and adjust the numbers for more.
 
 #### Q: I want supervisor, come on! Where is it? ####
