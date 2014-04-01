@@ -4,7 +4,7 @@
 #     {:input}
 # This script installs all the connected munin plugins
 import os
-INSTANCES="${:instances}"
+INSTANCES="""${:instances}"""
 CMD_TEMPLATE = ('${buildout:directory}/bin/%s install '
                 '/etc/munin/plugins ${munin:prefix} %s')
 
