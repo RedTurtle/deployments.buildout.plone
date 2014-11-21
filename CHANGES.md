@@ -3,6 +3,7 @@ CHANGES
 
 0.3 - (unreleased)
 ------------------
+- Fixed issue downloading threadframe [ale-rt]
 - Upgrade to Plone 4.3.2 [ale-rt]
 - Added products folder [ale-rt]
 
