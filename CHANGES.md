@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+0.4 - (unreleased)
+------------------
+- Upgrade to Plone 4.3.2
+  [ale-rt]
+
 0.3 - (2014/11/24)
 ------------------
 - Fixed issue downloading threadframe [ale-rt]
