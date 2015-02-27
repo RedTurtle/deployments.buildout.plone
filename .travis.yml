@@ -14,3 +14,8 @@ script:
 branches:
   except:
     - plone3.x
+script: make test
+sudo: false
+cache:
+  directories:
+    - eggs
