@@ -1,4 +1,4 @@
-# Plone 4 buildout #
+# Plone 5 buildout #
 
 [![Build Status](https://travis-ci.org/RedTurtle/deployments.buildout.plone.png?branch=master)](https://travis-ci.org/RedTurtle/deployments.buildout.plone)
 
