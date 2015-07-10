@@ -3,6 +3,7 @@ CHANGES
 
 0.4 - (unreleased)
 ------------------
+- Removed Zope Health Watcher (solves issues with threadframe)
 - Upgrade to Plone 4.3.2
   [ale-rt]
 
