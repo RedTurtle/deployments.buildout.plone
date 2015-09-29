@@ -3,7 +3,7 @@ CHANGES
 
 0.4 - (unreleased)
 ------------------
-- Upgrade to Plone 4.3.2
+- Upgrade to Plone 5.0
   [ale-rt]
 
 0.3 - (2014/11/24)
