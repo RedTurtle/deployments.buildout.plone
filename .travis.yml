@@ -3,14 +3,13 @@ python:
   - "2.6"
   - "2.7"
 install:
-  - pip install --upgrade setuptools
-  - python bootstrap.py -c ./.travis.cfg
+  - pip install -r requirements.txt
 before_script:
   - ln -s ./profiles/production.cfg production.cfg
   - ln -s ./profiles/development.cfg development.cfg
 script:
-  - bin/buildout -c development.cfg
-  - bin/buildout -c production.cfg
+  - buildout -c development.cfg
+  - buildout -c production.cfg
 branches:
   except:
     - plone3.x
