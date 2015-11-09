@@ -1,9 +1,11 @@
 CHANGES
 =======
 
-0.4 - (unreleased)
+0.4 - (2015/10/09)
 ------------------
-- Upgrade to Plone 4.3.2
+
+- Upgrade to Plone 4.3.7
+- Use requirements.txt instead of bootstrap.py
   [ale-rt]
 
 0.3 - (2014/11/24)
