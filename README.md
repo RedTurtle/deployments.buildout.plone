@@ -19,11 +19,10 @@ Make a symlink to the file you want to use (e.g. `development.cfg`)
 and start the buildout:
 ```bash
 virtualenv --no-site-packages -p `which python2.7` .
-ln -s profiles/development.cfg buildout.cfg
 . bin/activate
-pip install --upgrade setuptools
-python2.7 bootstrap.py
-./bin/buildout
+pip install -r requirements.txt
+ln -s profiles/development.cfg buildout.cfg
+buildout
 ```
 
 ## Before you start ##
@@ -247,12 +246,12 @@ the logrotate machinery:
 - bin/postrotate.sh
 
 ##### Log rotation #####
-The logrotation is handled externally from Zope by choice. 
+The logrotation is handled externally from Zope by choice.
 This allows at any time to use the system logrotate capabilities.
 To enable/update the configuration created via buildout
-you have to manualy copy or symlink the `etc/logrotate.conf` 
-file to the proper location. 
-See the `etc/logrotate.conf` file header 
+you have to manualy copy or symlink the `etc/logrotate.conf`
+file to the proper location.
+See the `etc/logrotate.conf` file header
 (created after you succesfully run the production buildout).
 To install the logrotate script you can run:
 ```bash

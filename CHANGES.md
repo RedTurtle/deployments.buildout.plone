@@ -5,6 +5,7 @@ CHANGES
 ------------------
 
 - Upgrade to Plone 5.0.6 [pnicolli]
+- Use requirements.txt instead of bootstrap.py
 
 0.4 - (unreleased)
 ------------------

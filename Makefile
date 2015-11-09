@@ -18,7 +18,7 @@ install_munin:
 install_files: install_crontab install_logrotate install_munin
 
 buildout:
-	./bin/buildout -Nt 2
+	buildout -Nt 2
 
 #update:
 #	svn up

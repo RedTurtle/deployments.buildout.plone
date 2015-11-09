@@ -8,11 +8,9 @@ PYTHON=`which python2.7 || which python`
 
 # Let's enter the virtualenv
 . bin/activate
-pip install --upgrade setuptools
+./bin/pip install -r requirements.txt
 
 # Now we have
 PYTHON=`which python2.7 || which python`
 ln -s profiles/development.cfg buildout.cfg
-
-$PYTHON bootstrap.py
 ./bin/buildout
