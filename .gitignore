@@ -14,3 +14,10 @@
 /profiles/ale.cfg
 /src/*
 /var/*
+/build/
+/cache/
+/fake-eggs/
+/psycopg2-2.0.8/
+/products
+/pypi-local/
+
