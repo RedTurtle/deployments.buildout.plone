@@ -7,7 +7,7 @@
 ${buildout:directory}/var/log/instance*.log {
         # you may want to uncomment or remove this according to
         # logrotate version
-        # su ${config:system-user} ${config:system-user}
+        # su ${autoconf:user} ${autoconf:user}
         weekly
         rotate ${:rotate}
         compress
