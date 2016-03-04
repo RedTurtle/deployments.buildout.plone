@@ -202,7 +202,7 @@ This buildout was designed with these goals:
 
 ### Profiles ###
 In the directory `./profiles` you will find configuration files
-that work __if and only__ if they are symlinked in the root of the buildout.
+that work __if and only if__ they are symlinked in the root of the buildout.
 
 We want profile files to live there to avoid pollution on the already crowded
 buildout directory.
