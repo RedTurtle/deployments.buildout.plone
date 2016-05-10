@@ -1,7 +1,12 @@
 CHANGES
 =======
 
-0.5 - (unreleased)
+0.6 - (2016/05/10)
+------------------
+
+- Upgrade to Plone 4.3.9 [pnicolli]
+
+0.5 - (2016/03/29)
 -----------------
 
 - Upgrade to Plone 4.3.8 [pnicolli]
