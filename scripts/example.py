@@ -35,7 +35,7 @@ class Application(object):
              '--commit',
              action='store_true',
         )
-        sys.exit(cls.main(parser.parse_args(sys.argv[3:])))
+        sys.exit(cls.main(parser.parse_args(sys.argv[1:])))
 
 
 if __name__ == "__main__":
