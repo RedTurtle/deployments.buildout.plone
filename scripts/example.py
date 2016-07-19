@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 import argparse
 import logging
+import sys
 import transaction
 from zope.component.hooks import getSite
 
