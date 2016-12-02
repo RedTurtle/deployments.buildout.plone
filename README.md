@@ -18,7 +18,7 @@ try to run this command:
 Make a symlink to the file you want to use (e.g. `development.cfg`)
 and start the buildout:
 ```bash
-virtualenv --no-site-packages -p `which python2.7`
+virtualenv --no-site-packages -p `which python2.7` .
 ln -s profiles/development.cfg buildout.cfg
 . bin/activate
 pip install --upgrade setuptools
@@ -60,11 +60,11 @@ __A:__ In the file `config/base.cfg` you may can control the plone version by ch
 __extends__ and __find-links__ variables:
 ```cfg
 extends =
-    http://dist.plone.org/release/4.3.2/versions.cfg
+    http://dist.plone.org/release/5.0.6/versions.cfg
     ...
 
 find-links =
-    http://dist.plone.org/release/4.3.2
+    http://dist.plone.org/release/5.0.6
     ...
 ```
 
