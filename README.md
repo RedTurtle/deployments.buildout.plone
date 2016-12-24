@@ -37,7 +37,7 @@ apt-get install python-dev python-virtualenv libxml2-dev libxslt1-dev
 # version control stuff
 apt-get install git subversion
 # other stuff
-apt-get install libjpeg8-dev poppler-utils  wv libgeos-c1
+apt-get install libjpeg62-turbo-dev poppler-utils  wv libgeos-c1v5
 ```
 
 Those commands are for Debian like system.
