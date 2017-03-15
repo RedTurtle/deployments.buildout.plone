@@ -59,11 +59,11 @@ __A:__ In the file `config/base.cfg` you may can control the plone version by ch
 __extends__ and __find-links__ variables:
 ```cfg
 extends =
-    http://dist.plone.org/release/5.0.6/versions.cfg
+    http://dist.plone.org/release/5.0.7/versions.cfg
     ...
 
 find-links =
-    http://dist.plone.org/release/5.0.6
+    http://dist.plone.org/release/5.0.7
     ...
 ```
 
