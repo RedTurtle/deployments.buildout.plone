@@ -1,3 +1,4 @@
+/.Python
 /.directory
 /.installed.cfg
 /.mr.developer.cfg
@@ -11,6 +12,6 @@
 /lib
 /local
 /parts
-/profiles/ale.cfg
+/pip-selfcheck.json
 /src/*
 /var/*
