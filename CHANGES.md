@@ -1,37 +1,21 @@
 CHANGES
 =======
 
-0.9 - (2017/03/15)
+1.1 - (2017/03/15)
 ------------------
 
-- Upgrade to Plone 4.3.12 [pnicolli]
+- Upgrade to Plone 5.0.7 [pnicolli]
 
 
-0.8 - (2016/12/02)
+1.0 - (2016/12/02)
 ------------------
 
-- Upgrade to Plone 4.3.11 [pnicolli]
-
-0.7 - (2016/07/28)
-------------------
-
-- Upgrade to Plone 4.3.10 [pnicolli]
-
-0.6 - (2016/05/10)
-------------------
-
-- Upgrade to Plone 4.3.9 [pnicolli]
-
-0.5 - (2016/03/29)
------------------
-
-- Upgrade to Plone 4.3.8 [pnicolli]
-
-0.4 - (2015/10/09)
-------------------
-
-- Upgrade to Plone 4.3.7
+- Upgrade to Plone 5.0.6 [pnicolli]
 - Use requirements.txt instead of bootstrap.py
+
+0.4 - (unreleased)
+------------------
+- Upgrade to Plone 5.0
   [ale-rt]
 
 0.3 - (2014/11/24)

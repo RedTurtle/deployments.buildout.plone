@@ -1,4 +1,4 @@
-# Plone 4 buildout #
+# Plone 5 buildout #
 
 [![Build Status](https://travis-ci.org/RedTurtle/deployments.buildout.plone.png?branch=master)](https://travis-ci.org/RedTurtle/deployments.buildout.plone)
 
@@ -59,11 +59,11 @@ __A:__ In the file `config/base.cfg` you may can control the plone version by ch
 __extends__ and __find-links__ variables:
 ```cfg
 extends =
-    http://dist.plone.org/release/4.3.12/versions.cfg
+    http://dist.plone.org/release/5.0.7/versions.cfg
     ...
 
 find-links =
-    http://dist.plone.org/release/4.3.12
+    http://dist.plone.org/release/5.0.7
     ...
 ```
 
