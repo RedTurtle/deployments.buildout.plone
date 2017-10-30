@@ -224,7 +224,7 @@ Hostname: 0.0.0.0
 Port: 8080
 2013-03-22 13:58:44 INFO Zope Ready to handle requests
 ```
-Adds to the buildout development scripts (`test`, `i18ndude`) and to plone some
+Adds to the buildout development scripts (`test`) and to plone some
 products (`plone.reload` and `stxnext.pdb`).
 Some other are suggested (commented) In the `profiles/development.cfg` file.
 Ask for new stuff if you want (`sauna.reload`, `plone.app.debugtoolbar`, ...).
