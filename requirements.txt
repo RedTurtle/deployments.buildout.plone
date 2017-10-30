@@ -1,5 +1,5 @@
 setuptools==26.1.1
 wheel==0.29.0
-zc.buildout==2.5.3
+zc.buildout==2.9.5
 mr.bob
 bobtemplates.plone
