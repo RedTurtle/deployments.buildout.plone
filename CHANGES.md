@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.3 - (unreleased)
+------------------
+
+- Removed the inactive link to majid.info [pnicolli]
+
+
 1.2 - (2017/08/22)
 ------------------
 
