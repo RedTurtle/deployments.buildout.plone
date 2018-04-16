@@ -1,10 +1,11 @@
 CHANGES
 =======
 
-1.3 - (unreleased)
+1.3 - (2018/04/16)
 ------------------
 
 - Removed the inactive link to majid.info [pnicolli]
+- Upgraded zc.buildout and setuptools requirements [pnicolli]
 
 
 1.2 - (2017/08/22)
