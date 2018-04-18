@@ -1,10 +1,11 @@
 CHANGES
 =======
 
-0.12 - (unreleased)
+0.12 - (2018/04/18)
 -------------------
 
 - Removed the inactive link to majid.info [pnicolli]
+- Updated buildout to work with new pypi [pnicolli]
 
 
 0.11 - (2017/08/22)
