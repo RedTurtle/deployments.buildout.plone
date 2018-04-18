@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.4.1 - (2018/04/18)
+--------------------
+
+- Updated buildout to work with new pypi.org [pnicolli]
+
+
 1.4 - (2018/04/16)
 ------------------
 
