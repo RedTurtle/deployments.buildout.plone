@@ -1,8 +1,0 @@
-#!${buildout:directory}/bin/python2.7
-
-from subprocess import call
-
-import sys
-
-
-call(["${buildout:directory}/parts/redis/bin/redis-server", "etc/redis.conf"])
