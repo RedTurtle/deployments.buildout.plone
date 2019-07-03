@@ -5,6 +5,8 @@ CHANGES
 ------------------
 
 - Upgraded to Plone 5.1.5 [pnicolli]
+- Cleaned up Makefile [pnicolli]
+- Updated .imfeelinglucky.sh based on shellcheck feedback [pnicolli]
 
 
 1.5 - (2018/10/18)
