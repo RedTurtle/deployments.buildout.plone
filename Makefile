@@ -20,10 +20,3 @@ install_files: install_crontab install_logrotate install_munin
 buildout:
 	buildout -Nt 2
 
-#update:
-#	svn up
-#	./bin/mr.developer update ''
-
-#diff:
-#	svn diff
-#	./bin/mr.developer status ''
