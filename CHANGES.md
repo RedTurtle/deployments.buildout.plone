@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.7 - (unreleased)
+------------------
+
+- Upgraded to Plone 5.2 Python3 [eikichi18]
+
+
 1.6 - (2019/07/03)
 ------------------
 
