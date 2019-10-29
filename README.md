@@ -43,6 +43,23 @@ apt-get install libjpeg62-turbo-dev poppler-utils  wv libgeos-c1v5
 Those commands are for Debian like system.
 You should adapt those commands for your system (if needed).
 
+## VOLTO ##
+Create a Volto buildout need some specific configuration.
+Right now for developer we have a specific .imfeelinglucky.sh like
+bash script: .volto.sh; or better, you can use make file and run
+```
+make volto
+```
+
+This script simply introduce an environment variable used in base.cfg
+to decide which sectiton to run.
+
+You can do everything manually just setting VOLTO=VOLTO before run
+buildout, like:
+```
+VOLTO=VOLTO ./bin/buildout -Nt 5
+```
+
 ## FAQ ##
 #### Q: How can I clone this buildout? ####
 __A:__ This buildout is meant to be a starting skeleton for a project.

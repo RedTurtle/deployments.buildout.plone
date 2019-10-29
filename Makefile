@@ -5,6 +5,9 @@ PATH := .:$(PATH)
 lucky:
 	./.imfeelinglucky.sh
 
+volto:
+	./.volto.sh
+
 install_crontab:
 	./bin/fab install_crontab
 
