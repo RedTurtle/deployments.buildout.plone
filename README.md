@@ -25,6 +25,27 @@ ln -s profiles/development.cfg buildout.cfg
 buildout
 ```
 
+## For volto users ##
+If you need to develop a [Volto](https://github.com/plone/volto) project, you 
+probably need to handle CORS. You can do this through a profile file, extending 
+config/volto.cfg. E.g. in profiles/development.cfg you can do:
+
+```
+[buildout]
+extends =
+    config/development.cfg
+    config/volto.cfg
+```
+
+Don't forget you also need to use collective.folderishtypes so extend your 
+buildout with it:
+```
+eggs +=
+    ${plone:eggs}
+    collective.folderishtypes
+```
+or put this package in your dependencies
+
 ## Before you start ##
 Probably you may want to set up your system and configure some parameters!
 Don't forget to read the full documentation.
