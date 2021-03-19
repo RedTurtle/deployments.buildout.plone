@@ -269,14 +269,9 @@ the logrotate machinery:
 ##### Log rotation #####
 The logrotation is handled externally from Zope by choice.
 This allows at any time to use the system logrotate capabilities.
-To enable/update the configuration created via buildout
-you have to manualy copy or symlink the `etc/logrotate.conf`
-file to the proper location.
-See the `etc/logrotate.conf` file header
-(created after you succesfully run the production buildout).
-To install the logrotate script you can run:
-```bash
-sudo make install_logrotate
+Logrotate are automaticaaly installed as a cronjob via a zc.buildout recipe
+in config/production.cfg and config/staging.cfg
+
 ```
 
 ##### munin #####
