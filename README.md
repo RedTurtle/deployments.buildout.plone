@@ -1,4 +1,4 @@
-# Plone 5 buildout #
+# Plone 5 buildout (python3)#
 
 [![Build Status](https://travis-ci.org/RedTurtle/deployments.buildout.plone.png?branch=master)](https://travis-ci.org/RedTurtle/deployments.buildout.plone)
 
@@ -18,7 +18,7 @@ try to run this command:
 Make a symlink to the file you want to use (e.g. `development.cfg`)
 and start the buildout:
 ```bash
-virtualenv --no-site-packages -p `which python2.7` .
+virtualenv --no-site-packages -p `which python3.7` .
 . bin/activate
 pip install -r requirements.txt
 ln -s profiles/development.cfg buildout.cfg
