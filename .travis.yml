@@ -1,6 +1,6 @@
 language: python
 python:
-  - "2.7"
+  - "3.7"
 install:
   - pip install -r requirements.txt
 before_script:
@@ -9,9 +9,9 @@ before_script:
 script:
   - buildout -c development.cfg
   - buildout -c production.cfg
-branches:
-  except:
-    - plone3.x
+#branches:
+#  except:
+#    - plone3.x
 sudo: false
 cache:
   directories:
