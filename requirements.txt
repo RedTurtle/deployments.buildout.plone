@@ -1,4 +1,4 @@
 setuptools==41.6.0
 wheel==0.29.0
-zc.buildout==2.13.2
+zc.buildout==3.0.1
 plonecli

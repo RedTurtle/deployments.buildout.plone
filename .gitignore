@@ -16,3 +16,4 @@
 /src/*
 /var/*
 /share/*
+pyvenv.cfg
